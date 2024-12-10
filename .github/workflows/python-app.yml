@@ -3,15 +3,15 @@ on:
  push:
    branches: [ "master" ]
 
- jobs:
-   build:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Code checkout
-         uses: actions/checkout@v3
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v3
 
-       - name: Login Dockerhub
-         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.pkg.github.com -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Login Dockerhub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.pkg.github.com -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
            
             
    
