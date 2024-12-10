@@ -1,0 +1,12 @@
+name: python-app
+
+# Trigger the workflow on any push to the main branch or pull request
+
+on:
+ push:
+   branches:
+     - master
+ jobs:
+   test:
+      runs-on: ubuntu-latest
+    
